@@ -1,16 +1,31 @@
-# React + Vite
+# PlayJuegos
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+PlayJuegos es un proyecto de e-commerce de videojuegos desarrollado como parte del curso de React. En esta primera etapa incluye la estructura inicial de la aplicación y el título de la tienda.
 
-Currently, two official plugins are available:
+## Tecnologías utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- React
+- JavaScript
+- Vite
+- HTML y CSS
+- Git y GitHub
 
-## React Compiler
+## Instalación y ejecución
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Para ejecutar el proyecto necesitás tener Node.js y npm instalados.
 
-## Expanding the ESLint configuration
+1. Descargá o cloná este repositorio.
+2. Abrí una terminal en la carpeta que contiene el archivo `package.json`.
+3. Instalá las dependencias:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+   ```bash
+   npm install
+   ```
+
+4. Iniciá el servidor de desarrollo:
+
+   ```bash
+   npm run dev
+   ```
+
+5. Abrí en el navegador la dirección que indique la terminal.

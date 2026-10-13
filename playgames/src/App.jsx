@@ -5,7 +5,7 @@ import Navbar from './components/Navbar'
   return (
     <div>
       <h1>Bienvenidos a PlayGames</h1>
-      <Navbar/>
+   
     </div>
   )
 }

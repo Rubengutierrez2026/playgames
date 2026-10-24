@@ -1,10 +1,15 @@
 import React from 'react'
 import Navbar from './components/Navbar'
+import ItemListContainer from './components/ItemListContainer'
 
  function App() {
   return (
     <div>
-      <h1>Bienvenidos a PlayGames</h1>
+       
+       <Navbar/>
+       <ItemListContainer Greeting= "¡Bienvenidos a PlayGames!"/>
+       
+
    
     </div>
   )

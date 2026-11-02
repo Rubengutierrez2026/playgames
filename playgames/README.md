@@ -19,6 +19,20 @@ El proyecto utiliza Tailwind CSS para aplicar estilos mediante clases en los com
 
 Tailwind se integra con Vite mediante el plugin `@tailwindcss/vite`.
 
+Las portadas se guardan en public/images/. Por ejemplo, la tarjeta de God of War carga su imagen desde /images/god-of-war.jpg.
+## Carga Asíncrona del catálogo
+
+Al abrir la tienda, primero aparece el mensaje de bienvenida. Aproximadamente dos segundos después se muestran los juegos. La demora simula la respuesta de una API usando datos locales:
+
+1. Datos de prueba: en Products.jsx, la función getProducts() devuelve una Promise. Dentro de ella, setTimeout espera 2000 milisegundos y luego llama a resolve(products) para entregar el array de juegos.
+
+2. Carga y estado: ItemListContainer inicia el estado items como un array vacío. Al montarse, usa useEffect con un array de dependencias vacío para ejecutar una función asíncrona. Esa función espera la respuesta con await getProducts() y guarda los juegos con setItems(resultado).
+
+3. Listado: ItemList recibe los juegos por props y los recorre con .map(). Por cada juego crea un componente Item con key={product.id}, de modo que React identifica cada tarjeta por su ID.
+
+4. Tarjeta: Item recibe un producto y presenta su información. La tarjeta no necesita pedir los datos ni gestionar el estado del catálogo.
+
+
 ## Instalación y ejecución
 
 Para ejecutar el proyecto necesitás tener Node.js y npm instalados.
@@ -43,7 +57,7 @@ Para detener el servidor, presioná `Ctrl + C`.
 
 ## Estado del proyecto
 
-Proyecto educativo en desarrollo. El carrito es visual y todavía no permite completar compras.
+El listado dinámico de productos está implementado con una API simulada. El carrito es visual y todavía no permite completar compras.
 
 ## Autor
 
